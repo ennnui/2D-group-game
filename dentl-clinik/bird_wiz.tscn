@@ -1,7 +1,6 @@
-[gd_scene format=3 uid="uid://cbro7qol3bvoh"]
+[gd_scene load_steps=16 format=3 uid="uid://cbro7qol3bvoh"]
 
-[ext_resource type="Texture2D" path="res://Rook-Sheet.png" id="1_u2e7j"]
-[ext_resource type="Texture2D" uid="uid://di1pa5jckrdc6" path="res://Assets/Rook-Sheet.png" id="3_qykxv"]
+[ext_resource type="Texture2D" uid="uid://dk7jkme0dud0u" path="res://Assets/Rook-Sheet.png" id="1_u2e7j"]
 
 [sub_resource type="GDScript" id="GDScript_gfdyp"]
 script/source = "extends CharacterBody2D
@@ -47,7 +46,7 @@ atlas = ExtResource("1_u2e7j")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xphr6"]
-atlas = ExtResource("3_qykxv")
+atlas = ExtResource("1_u2e7j")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_627ad"]
@@ -142,18 +141,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="bird wiz" type="Node2D" unique_id=1486650558]
+[node name="bird wiz" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1705833160]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = SubResource("GDScript_gfdyp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1828168511]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(244, 248)
 shape = SubResource("RectangleShape2D_u2e7j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=31361545]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(244.5, 248.5)
-scale = Vector2(5.562501, 5.562501)
+scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
 animation = &"idle"
-frame_progress = 0.055267368
+frame_progress = 0.0552674
