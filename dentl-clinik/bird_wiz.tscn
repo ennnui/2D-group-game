@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://cbro7qol3bvoh"]
+
+[ext_resource type="Texture2D" path="res://Rook-Sheet.png" id="1_u2e7j"]
+[ext_resource type="Texture2D" uid="uid://di1pa5jckrdc6" path="res://Assets/Rook-Sheet.png" id="3_qykxv"]
+
+[sub_resource type="GDScript" id="GDScript_gfdyp"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]
+size = Vector2(90, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfdyp"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qykxv"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcf0h"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xphr6"]
+atlas = ExtResource("3_qykxv")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_627ad"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lup6v"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igx0l"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvypv"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36f2d"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_if8p5"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ayf"]
+atlas = ExtResource("1_u2e7j")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xphr6"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_gfdyp")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_qykxv")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_bcf0h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xphr6")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_627ad")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_lup6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igx0l")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_627ad")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvypv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36f2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if8p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ayf")
+}],
+"loop": true,
+"name": &"walk_right_potion",
+"speed": 5.0
+}]
+
+[node name="bird wiz" type="Node2D" unique_id=1486650558]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1705833160]
+script = SubResource("GDScript_gfdyp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1828168511]
+position = Vector2(244, 248)
+shape = SubResource("RectangleShape2D_u2e7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=31361545]
+position = Vector2(244.5, 248.5)
+scale = Vector2(5.562501, 5.562501)
+sprite_frames = SubResource("SpriteFrames_xphr6")
+animation = &"idle"
+frame_progress = 0.055267368

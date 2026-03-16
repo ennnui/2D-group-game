@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
+
+[ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
+[ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
+[ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
+[ext_resource type="Texture2D" uid="uid://dhvsqkxi86csb" path="res://Assets/AdobeStock_449546878-removebg-preview.png" id="4_hx1ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx1ia"]
+size = Vector2(336, 21.51056)
+
+[node name="LVL" type="Node2D" unique_id=1690759621]
+
+[node name="bkg" type="ColorRect" parent="." unique_id=1063539138]
+offset_right = 1149.0
+offset_bottom = 648.0
+color = Color(0.57537156, 0.6325656, 0.5800991, 0.68235296)
+metadata/_edit_lock_ = true
+
+[node name="Platformer Stat" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
+position = Vector2(-7, 160)
+
+[node name="platform moving" parent="." unique_id=599980269 instance=ExtResource("3_4iw1c")]
+position = Vector2(22, 28)
+
+[node name="platform moving2" parent="." unique_id=697123228 instance=ExtResource("3_4iw1c")]
+position = Vector2(138, 359)
+
+[node name="croc" type="Sprite2D" parent="." unique_id=1144591414]
+position = Vector2(852, 449)
+texture = ExtResource("4_hx1ia")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="croc" unique_id=1529814982]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="croc/StaticBody2D" unique_id=223730965]
+position = Vector2(-25.975159, 104.41547)
+rotation = -0.27401668
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_hx1ia")
+
+[node name="bird wiz" parent="." unique_id=1486650558 instance=ExtResource("2_4iw1c")]
+position = Vector2(-175, -113)
