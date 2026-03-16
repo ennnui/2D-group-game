@@ -13,14 +13,13 @@ size = Vector2(336, 21.51056)
 [node name="bkg" type="ColorRect" parent="." unique_id=1063539138]
 offset_right = 1149.0
 offset_bottom = 648.0
-color = Color(0.57537156, 0.6325656, 0.5800991, 0.68235296)
-metadata/_edit_lock_ = true
+color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 
 [node name="Platformer Stat" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
 position = Vector2(-7, 160)
 
 [node name="platform moving" parent="." unique_id=599980269 instance=ExtResource("3_4iw1c")]
-position = Vector2(22, 28)
+position = Vector2(33, 29)
 
 [node name="platform moving2" parent="." unique_id=697123228 instance=ExtResource("3_4iw1c")]
 position = Vector2(138, 359)
@@ -39,3 +38,18 @@ shape = SubResource("RectangleShape2D_hx1ia")
 
 [node name="bird wiz" parent="." unique_id=1486650558 instance=ExtResource("2_4iw1c")]
 position = Vector2(-175, -113)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1365672652]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 298.0
+offset_top = 885.0
+offset_right = 549.0
+offset_bottom = 939.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "DED"
+editable = false
