@@ -5,3 +5,4 @@ func _on_body_entered(body):
 		body.kill()
 	else:
 		body.queue_free()
+#hell\lo

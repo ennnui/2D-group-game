@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
 [ext_resource type="Texture2D" uid="uid://dhvsqkxi86csb" path="res://Assets/AdobeStock_449546878-removebg-preview.png" id="4_hx1ia"]
-[ext_resource type="Script" uid="uid://dnpbdyibn3lnp" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" uid="uid://ceyqe0wfu2x7b" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx1ia"]
 size = Vector2(336, 21.5106)
@@ -38,7 +38,6 @@ texture = ExtResource("4_hx1ia")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="croc/StaticBody2D"]
 position = Vector2(-25.9752, 104.415)
 rotation = -0.274017
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hx1ia")
 
 [node name="killbox" type="Area2D" parent="."]
