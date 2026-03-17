@@ -1,57 +1,54 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6nfdqpeuo2ec"]
+[gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
 
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
 [ext_resource type="Texture2D" uid="uid://dhvsqkxi86csb" path="res://Assets/AdobeStock_449546878-removebg-preview.png" id="4_hx1ia"]
-[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx1ia"]
 size = Vector2(336, 21.5106)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
 
-[node name="LVL" type="Node2D"]
+[node name="LVL" type="Node2D" unique_id=925290357]
 
-[node name="bkg" type="ColorRect" parent="."]
+[node name="bkg" type="ColorRect" parent="." unique_id=456223926]
 offset_right = 1149.0
 offset_bottom = 648.0
 color = Color(0.575372, 0.632566, 0.580099, 0.682353)
 metadata/_edit_lock_ = true
 
-[node name="Platformer Stat" parent="." instance=ExtResource("1_xliyy")]
+[node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-7, 160)
 
-[node name="platform moving" parent="." instance=ExtResource("3_4iw1c")]
+[node name="platform moving" parent="." unique_id=1985015312 instance=ExtResource("3_4iw1c")]
 position = Vector2(32, 32)
 
-[node name="platform moving2" parent="." instance=ExtResource("3_4iw1c")]
-position = Vector2(138, 359)
-
-[node name="croc" type="Sprite2D" parent="."]
+[node name="croc" type="Sprite2D" parent="." unique_id=1312544020]
 position = Vector2(852, 449)
 texture = ExtResource("4_hx1ia")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="croc"]
+[node name="StaticBody2D" type="StaticBody2D" parent="croc" unique_id=325653138]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="croc/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="croc/StaticBody2D" unique_id=772521673]
 position = Vector2(-25.9752, 104.415)
 rotation = -0.274017
 shape = SubResource("RectangleShape2D_hx1ia")
 
-[node name="killbox" type="Area2D" parent="."]
+[node name="killbox" type="Area2D" parent="." unique_id=471621996]
 position = Vector2(-175, -113)
 scale = Vector2(1.01789, 1.25525)
 script = ExtResource("5_k0o5b")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killbox" unique_id=1012939293]
 position = Vector2(351.708, 610.238)
 scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_2a1lc")
 script = ExtResource("5_2a1lc")
 
-[node name="bird wiz" parent="." instance=ExtResource("2_4iw1c")]
+[node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 position = Vector2(-175, -113)
 scale = Vector2(1.00403, 1.00235)
 
