@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bh2gujcwc1eiy"]
+
+[ext_resource type="Texture2D" uid="uid://rm3sdvpjymye" path="res://open mouth top.png" id="1_238c1"]
+[ext_resource type="Texture2D" uid="uid://bldcfi27aglu8" path="res://open mouth bot.png" id="2_rbxf8"]
+
+[node name="teeth" type="Node2D" unique_id=862176840]
+
+[node name="OpenMouthTop" type="Sprite2D" parent="." unique_id=1263658910]
+position = Vector2(559, 171)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("1_238c1")
+
+[node name="OpenMouthBot" type="Sprite2D" parent="." unique_id=2140333923]
+position = Vector2(560, 503)
+scale = Vector2(0.601, 0.601)
+texture = ExtResource("2_rbxf8")

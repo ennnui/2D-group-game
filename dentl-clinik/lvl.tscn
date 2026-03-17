@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b6nfdqpeuo2ec"]
 
+[ext_resource type="PackedScene" uid="uid://bh2gujcwc1eiy" path="res://teeth.tscn" id="1_f2dqo"]
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
 [ext_resource type="Texture2D" uid="uid://dhvsqkxi86csb" path="res://Assets/AdobeStock_449546878-removebg-preview.png" id="4_hx1ia"]
-[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hx1ia"]
 size = Vector2(336, 21.5106)
@@ -19,6 +20,9 @@ offset_right = 1149.0
 offset_bottom = 648.0
 color = Color(0.575372, 0.632566, 0.580099, 0.682353)
 metadata/_edit_lock_ = true
+
+[node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
+position = Vector2(-10, -6)
 
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-7, 160)
