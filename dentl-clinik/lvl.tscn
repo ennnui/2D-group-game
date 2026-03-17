@@ -4,12 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
-[ext_resource type="Texture2D" uid="uid://dhvsqkxi86csb" path="res://Assets/AdobeStock_449546878-removebg-preview.png" id="4_hx1ia"]
 [ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
 [ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx1ia"]
-size = Vector2(336, 21.5106)
+[ext_resource type="PackedScene" uid="uid://bimqy7i5eyftt" path="res://character.tscn" id="7_f2dqo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
 
@@ -30,17 +27,6 @@ position = Vector2(-7, 160)
 [node name="platform moving" parent="." unique_id=1985015312 instance=ExtResource("3_4iw1c")]
 position = Vector2(32, 32)
 
-[node name="croc" type="Sprite2D" parent="." unique_id=1312544020]
-position = Vector2(852, 449)
-texture = ExtResource("4_hx1ia")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="croc" unique_id=325653138]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="croc/StaticBody2D" unique_id=772521673]
-position = Vector2(-25.9752, 104.415)
-rotation = -0.274017
-shape = SubResource("RectangleShape2D_hx1ia")
-
 [node name="killbox" type="Area2D" parent="." unique_id=471621996]
 position = Vector2(-175, -113)
 scale = Vector2(1.01789, 1.25525)
@@ -55,5 +41,10 @@ script = ExtResource("5_2a1lc")
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 position = Vector2(-175, -113)
 scale = Vector2(1.00403, 1.00235)
+
+[node name="character" parent="bird wiz" unique_id=1402878411 instance=ExtResource("7_f2dqo")]
+position = Vector2(1074.6692, 502.81845)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=548753819]
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
