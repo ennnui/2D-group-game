@@ -6,7 +6,7 @@
 [node name="teeth" type="Node2D" unique_id=862176840]
 
 [node name="OpenMouthTop" type="Sprite2D" parent="." unique_id=1263658910]
-position = Vector2(559, 171)
+position = Vector2(559, 137)
 scale = Vector2(0.601, 0.601)
 texture = ExtResource("1_238c1")
 

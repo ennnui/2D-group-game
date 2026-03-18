@@ -1,16 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://cbro7qol3bvoh"]
+[gd_scene format=3 uid="uid://cbro7qol3bvoh"]
 
-[ext_resource type="Texture2D" uid="uid://dk7jkme0dud0u" path="res://Assets/Rook-Sheet.png" id="1_u2e7j"]
+[ext_resource type="Texture2D" uid="uid://dk7jkme0dud0u" path="res://Rook-Sheet.png" id="1_u2e7j"]
 
 [sub_resource type="GDScript" id="GDScript_gfdyp"]
 script/source = "extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -600.0
 
-
-func _physics_process(delta: float) -> void:
+@onready var bird_wiz = $AnimatedSprite2D
+func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -28,6 +28,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	#code below flips the image of the sprite depending on which direction it is facing :D
+	var isLeft = velocity.x < 0
+	bird_wiz.flip_h = isLeft
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]
@@ -120,6 +124,40 @@ animations = [{
 "texture": SubResource("AtlasTexture_627ad")
 }],
 "loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvypv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36f2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_if8p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ayf")
+}],
+"loop": true,
+"name": &"walk_left_potion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_627ad")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_lup6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igx0l")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_627ad")
+}],
+"loop": true,
 "name": &"walk_right",
 "speed": 5.0
 }, {
@@ -141,18 +179,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="bird wiz" type="Node2D"]
+[node name="bird wiz" type="Node2D" unique_id=865072794]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1731684117]
 script = SubResource("GDScript_gfdyp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1891853261]
 position = Vector2(244, 248)
 shape = SubResource("RectangleShape2D_u2e7j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1119046925]
 position = Vector2(244.5, 248.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
-animation = &"idle"
-frame_progress = 0.0552674
+animation = &"walk_right"
