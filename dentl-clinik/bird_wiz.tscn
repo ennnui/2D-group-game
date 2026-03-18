@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cbro7qol3bvoh"]
 
 [ext_resource type="Texture2D" uid="uid://dk7jkme0dud0u" path="res://Rook-Sheet.png" id="1_u2e7j"]
+[ext_resource type="Texture2D" uid="uid://c8oki5s70cebp" path="res://rook_revised.png" id="2_gfdyp"]
 
 [sub_resource type="GDScript" id="GDScript_gfdyp"]
 script/source = "extends CharacterBody2D
@@ -8,6 +9,7 @@ script/source = "extends CharacterBody2D
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -600.0
+@export var last_direction := Vector2(1,0)
 
 @onready var bird_wiz = $AnimatedSprite2D
 func _physics_process(delta):
@@ -16,12 +18,12 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+	if Input.is_action_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	var direction := Input.get_axis(\"walk_left\", \"walk_right\")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -29,9 +31,16 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	#code below flips the image of the sprite depending on which direction it is facing :D
+
+	
+	#Flips sprite direction when walking... but does not keep it
 	var isLeft = velocity.x < 0
 	bird_wiz.flip_h = isLeft
+	
+	#TRYING TO KEEP THE DIRECTION OF WALK CONSTANT; i know the answer is in the code below...
+	#if direction.speed() > 0:
+		#last_direction = direction
+		#play_walk_animation(direction)
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]
@@ -41,62 +50,83 @@ size = Vector2(90, 90)
 atlas = ExtResource("1_u2e7j")
 region = Rect2(16, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_528w0"]
+atlas = ExtResource("2_gfdyp")
+region = Rect2(16, 32, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_qykxv"]
-atlas = ExtResource("1_u2e7j")
+atlas = ExtResource("2_gfdyp")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bcf0h"]
-atlas = ExtResource("1_u2e7j")
+atlas = ExtResource("2_gfdyp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwd2n"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(32, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwqqq"]
+atlas = ExtResource("2_gfdyp")
+region = Rect2(48, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_xphr6"]
-atlas = ExtResource("1_u2e7j")
+atlas = ExtResource("2_gfdyp")
 region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_627ad"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8jwk"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(0, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lup6v"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk6nl"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(48, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_igx0l"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5icvs"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvypv"]
-atlas = ExtResource("1_u2e7j")
-region = Rect2(48, 32, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjdrh"]
+atlas = ExtResource("2_gfdyp")
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_36f2d"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ps3g"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(16, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_if8p5"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfh14"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n4ayf"]
-atlas = ExtResource("1_u2e7j")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n7px"]
+atlas = ExtResource("2_gfdyp")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xphr6"]
 animations = [{
 "frames": [{
-"duration": 10.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_gfdyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528w0")
 }],
 "loop": true,
 "name": &"dead",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 2.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qykxv")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_bcf0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwd2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwqqq")
 }],
 "loop": true,
 "name": &"idle",
@@ -112,16 +142,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_627ad")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_lup6v")
+"texture": SubResource("AtlasTexture_r8jwk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_igx0l")
+"texture": SubResource("AtlasTexture_wk6nl")
 }, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_627ad")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5icvs")
 }],
 "loop": true,
 "name": &"walk_left",
@@ -129,53 +156,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lvypv")
+"texture": SubResource("AtlasTexture_rjdrh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_36f2d")
+"texture": SubResource("AtlasTexture_7ps3g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_if8p5")
+"texture": SubResource("AtlasTexture_bfh14")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n4ayf")
+"texture": SubResource("AtlasTexture_8n7px")
 }],
 "loop": true,
 "name": &"walk_left_potion",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_627ad")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_lup6v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igx0l")
-}, {
-"duration": 0.5,
-"texture": SubResource("AtlasTexture_627ad")
-}],
-"loop": true,
-"name": &"walk_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lvypv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_36f2d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_if8p5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n4ayf")
-}],
-"loop": true,
-"name": &"walk_right_potion",
 "speed": 5.0
 }]
 
@@ -192,4 +185,5 @@ shape = SubResource("RectangleShape2D_u2e7j")
 position = Vector2(244.5, 248.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
-animation = &"walk_right"
+animation = &"walk_left_potion"
+frame_progress = 0.66651213
