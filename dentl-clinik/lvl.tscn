@@ -4,11 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
-[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
 [ext_resource type="PackedScene" uid="uid://bimqy7i5eyftt" path="res://character.tscn" id="7_f2dqo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
+
+[sub_resource type="Curve2D" id="Curve2D_f2dqo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 317, 354, 0, 0, 0, 0, 317, -39)
+}
+point_count = 2
 
 [node name="LVL" type="Node2D" unique_id=925290357]
 
@@ -19,13 +25,10 @@ color = Color(0.575372, 0.632566, 0.580099, 0.682353)
 metadata/_edit_lock_ = true
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
-position = Vector2(-10, -6)
+position = Vector2(41, -2)
 
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-7, 160)
-
-[node name="platform moving" parent="." unique_id=1985015312 instance=ExtResource("3_4iw1c")]
-position = Vector2(32, 32)
 
 [node name="killbox" type="Area2D" parent="." unique_id=471621996]
 position = Vector2(-175, -113)
@@ -43,8 +46,12 @@ position = Vector2(-175, -113)
 scale = Vector2(1.00403, 1.00235)
 
 [node name="character" parent="bird wiz" unique_id=1402878411 instance=ExtResource("7_f2dqo")]
-position = Vector2(1074.6692, 502.81845)
+position = Vector2(584.6438, 885.91815)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=548753819]
+
+[node name="Path2D" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
+position = Vector2(-16, 241)
+curve = SubResource("Curve2D_f2dqo")
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
