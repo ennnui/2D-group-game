@@ -4,17 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
-[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
 [ext_resource type="PackedScene" uid="uid://bimqy7i5eyftt" path="res://character.tscn" id="7_f2dqo"]
+
+[sub_resource type="Curve2D" id="Curve2D_5ud41"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 315.4762, 445.10733, 0, 0, 0, 0, 315.4762, 918.8543, 0, 0, 0, 0, 315.4762, 445.10733)
+}
+point_count = 3
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
 
 [sub_resource type="Curve2D" id="Curve2D_f2dqo"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 317, 354, 0, 0, 0, 0, 317, -39)
+"points": PackedVector2Array(0, 0, 0, 0, 278, -43, 0, 0, 0, 0, 280, 356, 0, 0, 0, 0, 374, 357, 0, 0, 0, 0, 376, 149, 0, 0, 0, 0, 375, -45, 0, 0, 0, 0, 278, -44)
 }
-point_count = 2
+point_count = 6
 
 [node name="LVL" type="Node2D" unique_id=925290357]
 
@@ -23,6 +29,11 @@ offset_right = 1149.0
 offset_bottom = 648.0
 color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
+
+[node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
+position = Vector2(-71.00001, -178)
+scale = Vector2(0.84, 0.838)
+curve = SubResource("Curve2D_5ud41")
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(41, -2)
@@ -49,9 +60,12 @@ scale = Vector2(1.00403, 1.00235)
 position = Vector2(586.63586, 896.8923)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=548753819]
+visible = false
 
-[node name="Path2D" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
-position = Vector2(-111, 241)
+[node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
+visible = false
+position = Vector2(-87.979614, 238.2449)
+scale = Vector2(0.93877554, 0.93877554)
 curve = SubResource("Curve2D_f2dqo")
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
