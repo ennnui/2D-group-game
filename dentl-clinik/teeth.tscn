@@ -1,16 +1,130 @@
 [gd_scene format=3 uid="uid://bh2gujcwc1eiy"]
 
 [ext_resource type="Texture2D" uid="uid://rm3sdvpjymye" path="res://open mouth top.png" id="1_238c1"]
+[ext_resource type="Script" uid="uid://bsl0164y1ywem" path="res://teeth.gd" id="1_rbxf8"]
 [ext_resource type="Texture2D" uid="uid://bldcfi27aglu8" path="res://open mouth bot.png" id="2_rbxf8"]
 
+[sub_resource type="Animation" id="Animation_nhvtx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenMouthBot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(560, 503)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpenMouthTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(559, 137)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mouth_closed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m30r6"]
+resource_name = "open_close"
+length = 5.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OpenMouthBot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.17, 0.23349649, 0.30833334, 0.3611332, 0.5301332, 0.99333334, 3.0833333, 4.9933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(563, 472), Vector2(560, 503), Vector2(560, 388), Vector2(560, 503)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OpenMouthTop:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 0.17, 0.23349649, 0.30583686, 0.3611332, 0.5301332, 0.99333334, 3.0833333, 4.9933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(561, 162), Vector2(559, 137), Vector2(559, 292), Vector2(559, 137)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mouth_closed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.6666667, 2.9, 3.4, 3.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_whnn1"]
+_data = {
+&"RESET": SubResource("Animation_nhvtx"),
+&"open_close": SubResource("Animation_m30r6")
+}
+
 [node name="teeth" type="Node2D" unique_id=862176840]
+script = ExtResource("1_rbxf8")
+mouth_closed = true
 
 [node name="OpenMouthTop" type="Sprite2D" parent="." unique_id=1263658910]
 position = Vector2(559, 137)
 scale = Vector2(0.601, 0.601)
 texture = ExtResource("1_238c1")
 
+[node name="Area2D" type="Area2D" parent="OpenMouthTop" unique_id=273336601]
+position = Vector2(-930.11646, -227.9534)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthTop/Area2D" unique_id=1061021918]
+position = Vector2(523, 120)
+polygon = PackedVector2Array(345, 87, 321, 77, 314, 73, 281, 88, 254, 56, 201, 26, 170, 69, 155, 27, 110, 69, 57, 68, 26, 50, 0, 73, -50, 74, -95, 41, -105, 75, -141, 38, -188, 56, -204, 90, -225, 101, -254, 91, -288, 97, -304, 68, -234, -24, -40, -86, 234, -72, 361, 4, 370, 85)
+
 [node name="OpenMouthBot" type="Sprite2D" parent="." unique_id=2140333923]
 position = Vector2(560, 503)
 scale = Vector2(0.601, 0.601)
 texture = ExtResource("2_rbxf8")
+
+[node name="Area2D" type="Area2D" parent="OpenMouthBot" unique_id=449628606]
+position = Vector2(-930.11646, -227.9534)
+scale = Vector2(1.6638935, 1.6638935)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="OpenMouthBot/Area2D" unique_id=1430679493]
+position = Vector2(595, 152)
+rotation = -3.1415927
+polygon = PackedVector2Array(345, 87, 321, 77, 314, 73, 281, 88, 254, 56, 201, 26, 170, 69, 155, 27, 110, 69, 57, 68, 26, 50, 0, 73, -50, 74, -95, 41, -105, 75, -141, 38, -188, 56, -204, 90, -225, 101, -254, 91, -288, 97, -304, 68, -234, -24, -40, -86, 234, -72, 361, 4, 370, 85)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=842878224]
+libraries/ = SubResource("AnimationLibrary_whnn1")
+
+[node name="Timer" type="Timer" parent="AnimationPlayer" unique_id=2086134680]
+
+[connection signal="body_entered" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="OpenMouthTop/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="AnimationPlayer/Timer" to="." method="_on_timer_timeout"]

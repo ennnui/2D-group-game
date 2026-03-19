@@ -25,6 +25,14 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis(\"walk_left\", \"walk_right\")
 	if direction:
+		print(direction)
+		if direction == -1:
+			bird_wiz.flip_h = true
+			
+		elif direction == 1:
+			bird_wiz.flip_h = false
+	
+	
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -32,10 +40,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 
-	
-	#Flips sprite direction when walking... but does not keep it
-	var isLeft = velocity.x < 0
-	bird_wiz.flip_h = isLeft
+
 	
 	#TRYING TO KEEP THE DIRECTION OF WALK CONSTANT; i know the answer is in the code below...
 	#if direction.speed() > 0:
@@ -186,4 +191,4 @@ position = Vector2(244.5, 248.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
 animation = &"walk_left_potion"
-frame_progress = 0.66651213
+frame_progress = 0.55245423

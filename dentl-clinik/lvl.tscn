@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
-[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
-[ext_resource type="PackedScene" uid="uid://bimqy7i5eyftt" path="res://character.tscn" id="7_f2dqo"]
+[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="PackedScene" uid="uid://bvps70ore51r" path="res://rotating_platform.tscn" id="8_5ud41"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
 _data = {
@@ -31,12 +31,13 @@ color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
-position = Vector2(-71.00001, -178)
+position = Vector2(-63.999977, -177.99998)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_5ud41")
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(41, -2)
+mouth_closed = true
 
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-77, 160)
@@ -56,16 +57,12 @@ script = ExtResource("5_2a1lc")
 position = Vector2(-175, -113)
 scale = Vector2(1.00403, 1.00235)
 
-[node name="character" parent="bird wiz" unique_id=1402878411 instance=ExtResource("7_f2dqo")]
-position = Vector2(586.63586, 896.8923)
-
-[node name="Node2D" type="Node2D" parent="." unique_id=548753819]
-visible = false
-
 [node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
-visible = false
-position = Vector2(-87.979614, 238.2449)
+position = Vector2(756, 217)
 scale = Vector2(0.93877554, 0.93877554)
 curve = SubResource("Curve2D_f2dqo")
+
+[node name="Rotating platform" parent="." unique_id=163208465 instance=ExtResource("8_5ud41")]
+position = Vector2(2, -10)
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
