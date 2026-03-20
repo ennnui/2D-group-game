@@ -31,13 +31,15 @@ color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
-position = Vector2(-63.999977, -177.99998)
+position = Vector2(-61, -194)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_5ud41")
 
+[node name="Rotating platform" parent="." unique_id=163208465 instance=ExtResource("8_5ud41")]
+position = Vector2(2, 12)
+
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(41, -2)
-mouth_closed = true
 
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-77, 160)
@@ -61,8 +63,5 @@ scale = Vector2(1.00403, 1.00235)
 position = Vector2(756, 217)
 scale = Vector2(0.93877554, 0.93877554)
 curve = SubResource("Curve2D_f2dqo")
-
-[node name="Rotating platform" parent="." unique_id=163208465 instance=ExtResource("8_5ud41")]
-position = Vector2(2, -10)
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
