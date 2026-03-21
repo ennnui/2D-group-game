@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dp2yhfi3ekfhx"]
 
+[ext_resource type="Script" uid="uid://k14l8rb7idjy" path="res://control.gd" id="1_ee4bf"]
 [ext_resource type="FontFile" uid="uid://d1v6yv3a3npeo" path="res://Assets/monogram/ttf/monogram.ttf" id="1_qtu10"]
 [ext_resource type="Texture2D" uid="uid://ok6jrwmekcc4" path="res://Assets/again24x24.png" id="2_62e2m"]
 
@@ -27,6 +28,7 @@ offset_right = -60.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ee4bf")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=787541916]
 layout_mode = 1
@@ -61,3 +63,5 @@ size_flags_vertical = 8
 theme_override_colors/icon_hover_color = Color(0.5803922, 0.8901961, 0.27058825, 1)
 icon = ExtResource("2_62e2m")
 icon_alignment = 1
+
+[connection signal="button_down" from="PanelContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]
