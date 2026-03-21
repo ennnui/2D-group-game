@@ -33,12 +33,7 @@ color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
-position = Vector2(-65, -147.00002)
-scale = Vector2(0.84, 0.838)
-curve = SubResource("Curve2D_5ud41")
-
-[node name="Path2D3" parent="." unique_id=287333990 instance=ExtResource("3_4iw1c")]
-position = Vector2(1035, -604)
+position = Vector2(-49.000008, -95.00001)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_5ud41")
 
@@ -51,13 +46,16 @@ position = Vector2(36, -75)
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-77, 541)
 
+[node name="Platformer Stat2" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
+position = Vector2(1156, -21)
+
 [node name="killbox" type="Area2D" parent="." unique_id=471621996]
 position = Vector2(-175, -113)
 scale = Vector2(1.01789, 1.25525)
 script = ExtResource("5_k0o5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killbox" unique_id=1012939293]
-position = Vector2(391.98734, 571.9976)
+position = Vector2(351.708, 610.238)
 scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_2a1lc")
 script = ExtResource("5_2a1lc")
