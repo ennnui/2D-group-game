@@ -23,28 +23,30 @@ func _physics_process(delta):
 		
 		
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# walking and turning
 	var direction := Input.get_axis(\"walk_left\", \"walk_right\")
+	
 	if direction:
 		print(direction)
 		if direction == -1:
 			bird_wiz.flip_h = true
+			$AnimatedSprite2D.play(\"walk_left\")
 			
 		elif direction == 1:
 			bird_wiz.flip_h = false
+			$AnimatedSprite2D.play(\"walk_left\")
 	
 	
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		$AnimatedSprite2D.play(\"idle\")
 	
 	#func kill():
 		#position = $\"../Respawn\".position
 		#print(\"im dead\")
 
 	move_and_slide()
-	
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]

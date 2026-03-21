@@ -13,6 +13,8 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_f2dqo"]
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2a1lc"]
 
 [sub_resource type="Curve2D" id="Curve2D_f2dqo"]
@@ -45,7 +47,17 @@ position = Vector2(36, -75)
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
 position = Vector2(-77, 541)
 
-[node name="Platformer Stat2" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
+[node name="Platformer Stat3" parent="." unique_id=1799891836 instance=ExtResource("1_xliyy")]
+position = Vector2(-281, 541)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platformer Stat3" unique_id=94782076]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platformer Stat3/StaticBody2D2" unique_id=489712105]
+position = Vector2(147, 31)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_f2dqo")
+
+[node name="Platformer Stat2" parent="." unique_id=1696825721 instance=ExtResource("1_xliyy")]
 position = Vector2(1156, -21)
 
 [node name="killbox" type="Area2D" parent="." unique_id=471621996]
