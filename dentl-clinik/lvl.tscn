@@ -75,7 +75,7 @@ position = Vector2(-175, 264.00003)
 scale = Vector2(1.00403, 1.00235)
 
 [node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]
-position = Vector2(756, 217)
+position = Vector2(758, 103.000015)
 scale = Vector2(0.93877554, 0.93877554)
 curve = SubResource("Curve2D_f2dqo")
 
