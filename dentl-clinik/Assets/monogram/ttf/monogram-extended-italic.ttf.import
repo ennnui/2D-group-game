@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://btb2tx1lcftam"
-path="res://.godot/imported/monogram-extended.ttf-dbebc638062e41846b3fe09e5dec174f.fontdata"
+uid="uid://cy8aldwmcxnih"
+path="res://.godot/imported/monogram-extended-italic.ttf-09790d2e8fe9e936e1bcf7ab7ba76c2f.fontdata"
 
 [deps]
 
-source_file="res://monogram/ttf/monogram-extended.ttf"
-dest_files=["res://.godot/imported/monogram-extended.ttf-dbebc638062e41846b3fe09e5dec174f.fontdata"]
+source_file="res://Assets/monogram/ttf/monogram-extended-italic.ttf"
+dest_files=["res://.godot/imported/monogram-extended-italic.ttf-09790d2e8fe9e936e1bcf7ab7ba76c2f.fontdata"]
 
 [params]
 

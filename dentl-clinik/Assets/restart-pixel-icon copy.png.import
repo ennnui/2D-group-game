@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs7kedy0wnqku"
-path="res://.godot/imported/monogram.p8.png-9b099bd4f0ef3b57d9f30600c39a77d2.ctex"
+uid="uid://bmtetdwj1mu05"
+path="res://.godot/imported/restart-pixel-icon copy.png-a3d9326b50f21be31a8682fa5aaed6c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monogram/pico-8/monogram.p8.png"
-dest_files=["res://.godot/imported/monogram.p8.png-9b099bd4f0ef3b57d9f30600c39a77d2.ctex"]
+source_file="res://Assets/restart-pixel-icon copy.png"
+dest_files=["res://.godot/imported/restart-pixel-icon copy.png-a3d9326b50f21be31a8682fa5aaed6c6.ctex"]
 
 [params]
 

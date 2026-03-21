@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dthww7xttojhf"
-path="res://.godot/imported/monogram-italic-bitmap.png-3207de1e4b79801bec94756fa6a82c11.ctex"
+uid="uid://bs7kedy0wnqku"
+path="res://.godot/imported/monogram.p8.png-9bf8c498a1f3393550dcb712637a9012.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monogram/bitmap/monogram-italic-bitmap.png"
-dest_files=["res://.godot/imported/monogram-italic-bitmap.png-3207de1e4b79801bec94756fa6a82c11.ctex"]
+source_file="res://Assets/monogram/pico-8/monogram.p8.png"
+dest_files=["res://.godot/imported/monogram.p8.png-9bf8c498a1f3393550dcb712637a9012.ctex"]
 
 [params]
 
