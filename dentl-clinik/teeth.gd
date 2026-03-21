@@ -5,6 +5,11 @@ var proximity_player = false
 var player_alive = true
 var minimum = 7
 var maximum = 15
+#calling the area2d that's nested as a child of top&bot sprite2d
+@onready var area_top = $OpenMouthTop/Area2D
+@onready var area_bot = $OpenMouthBot/Area2D
+#defining bird wiz as the player, retrieving bird wiz(characterbody2d) from the main scene, LVL.
+@onready var player = get_node("../bird wiz/CharacterBody2D")
 
 #teeth animation start, random wait time range(?)
 func _ready():
@@ -12,16 +17,20 @@ func _ready():
 	$AnimationPlayer/Timer.start()
 
 #body enter
-func _on_area_2d_body_entered(Node2D) -> void:
-	proximity_player = true
-
+#func _on_area_2d_body_entered(Node2D) -> void:
+	#proximity_player = true
+	
 
 func _process(delta: float) -> void:
-	if proximity_player and mouth_closed and player_alive:
-		#edit below for kill func l8r
+	proximity_player = area_top.overlaps_body(player) and area_bot.overlaps_body(player)
+	print("area_bot detection: ", area_bot.overlaps_body(player))
+	print(proximity_player)
+	
+	if proximity_player and player_alive:
+		#get_tree().reload_current_scene()
 		print("player_is_dead") 
 		player_alive = false
-	print(mouth_closed)
+
 
 func _on_timer_timeout() -> void:
 	$AnimationPlayer.play("open_close")
