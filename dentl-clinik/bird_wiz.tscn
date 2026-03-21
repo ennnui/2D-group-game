@@ -50,7 +50,7 @@ func _physics_process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]
-size = Vector2(90, 90)
+size = Vector2(83, 90)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfdyp"]
 atlas = ExtResource("1_u2e7j")
@@ -184,16 +184,15 @@ animations = [{
 script = SubResource("GDScript_gfdyp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1891853261]
-position = Vector2(244, 248)
+position = Vector2(247.5, 248)
 shape = SubResource("RectangleShape2D_u2e7j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1119046925]
 position = Vector2(244.5, 248.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
-animation = &"dead"
+animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.18754996
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=41876210]
 position = Vector2(579, 179)

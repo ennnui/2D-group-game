@@ -94,6 +94,10 @@ horizontal_alignment = 1
 position = Vector2(-221, 264.00003)
 scale = Vector2(1.00403, 1.00235)
 
+[node name="AudioListener2D" type="AudioListener2D" parent="bird wiz" unique_id=1212625771]
+position = Vector2(246.00859, 246.42087)
+scale = Vector2(0.9959863, 0.99765563)
+
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
 position = Vector2(2212, -129)
 

@@ -19,6 +19,10 @@ run/main_scene="uid://b6nfdqpeuo2ec"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioBg="*uid://itxoa8d33inx"
+
 [input]
 
 walk_right={
