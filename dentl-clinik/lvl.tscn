@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d0pmk23cb40rd" path="res://platformer_stat.tscn" id="1_xliyy"]
 [ext_resource type="PackedScene" uid="uid://cbro7qol3bvoh" path="res://bird_wiz.tscn" id="2_4iw1c"]
 [ext_resource type="PackedScene" uid="uid://k8fdej2ee7rl" path="res://platform_moving.tscn" id="3_4iw1c"]
-[ext_resource type="Script" path="res://collision_shape_2d.gd" id="5_2a1lc"]
-[ext_resource type="Script" path="res://killbox.gd" id="5_k0o5b"]
+[ext_resource type="Script" uid="uid://dhg4d2m0qgggi" path="res://collision_shape_2d.gd" id="5_2a1lc"]
+[ext_resource type="Script" uid="uid://01u0x7bilm4y" path="res://killbox.gd" id="5_k0o5b"]
 [ext_resource type="PackedScene" uid="uid://bvps70ore51r" path="res://rotating_platform.tscn" id="8_5ud41"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
