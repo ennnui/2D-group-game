@@ -10,7 +10,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 315.4762, 445.10733, 0, 0, 0, 0, 315.4762, 918.8543, 0, 0, 0, 0, 315.4762, 445.10733)
+"points": PackedVector2Array(0, 0, 0, 0, 315.4762, 445.10733, 0, 0, 0, 0, 315.4762, 779.2362, 0, 0, 0, 0, 315.4762, 445.10733)
 }
 point_count = 3
 
@@ -25,24 +25,31 @@ point_count = 6
 [node name="LVL" type="Node2D" unique_id=925290357]
 
 [node name="bkg" type="ColorRect" parent="." unique_id=456223926]
-offset_right = 1149.0
-offset_bottom = 648.0
+offset_left = -657.0
+offset_top = -732.0
+offset_right = 1840.0
+offset_bottom = 1384.0
 color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
 
 [node name="Path2D2" parent="." unique_id=1315880157 instance=ExtResource("3_4iw1c")]
-position = Vector2(-61, -194)
+position = Vector2(-65, -147.00002)
+scale = Vector2(0.84, 0.838)
+curve = SubResource("Curve2D_5ud41")
+
+[node name="Path2D3" parent="." unique_id=287333990 instance=ExtResource("3_4iw1c")]
+position = Vector2(1035, -604)
 scale = Vector2(0.84, 0.838)
 curve = SubResource("Curve2D_5ud41")
 
 [node name="Rotating platform" parent="." unique_id=163208465 instance=ExtResource("8_5ud41")]
-position = Vector2(2, 12)
+position = Vector2(611, 256)
 
 [node name="teeth" parent="." unique_id=862176840 instance=ExtResource("1_f2dqo")]
-position = Vector2(41, -2)
+position = Vector2(36, -75)
 
 [node name="Platformer Stat" parent="." unique_id=2089455931 instance=ExtResource("1_xliyy")]
-position = Vector2(-77, 160)
+position = Vector2(-77, 541)
 
 [node name="killbox" type="Area2D" parent="." unique_id=471621996]
 position = Vector2(-175, -113)
@@ -50,13 +57,13 @@ scale = Vector2(1.01789, 1.25525)
 script = ExtResource("5_k0o5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killbox" unique_id=1012939293]
-position = Vector2(351.708, 610.238)
+position = Vector2(391.98734, 571.9976)
 scale = Vector2(1.94792, 2.9054)
 shape = SubResource("WorldBoundaryShape2D_2a1lc")
 script = ExtResource("5_2a1lc")
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
-position = Vector2(-175, -113)
+position = Vector2(-175, 264.00003)
 scale = Vector2(1.00403, 1.00235)
 
 [node name="Path2D" parent="." unique_id=1742835241 instance=ExtResource("3_4iw1c")]

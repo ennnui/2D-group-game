@@ -8,7 +8,7 @@ script/source = "extends CharacterBody2D
 
 
 const SPEED = 400.0
-const JUMP_VELOCITY = -600.0
+const JUMP_VELOCITY = -400.0
 @export var last_direction := Vector2(1,0)
 
 @onready var bird_wiz = $AnimatedSprite2D
@@ -190,6 +190,6 @@ shape = SubResource("RectangleShape2D_u2e7j")
 position = Vector2(244.5, 248.5)
 scale = Vector2(5.5625, 5.5625)
 sprite_frames = SubResource("SpriteFrames_xphr6")
-animation = &"idle"
+animation = &"dead"
 autoplay = "idle"
-frame_progress = 0.084013015
+frame_progress = 0.5916138
