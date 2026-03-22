@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://bjiese4j56b5x" path="res://water/1_00044.png" id="55_eej05"]
 [ext_resource type="Texture2D" uid="uid://2mrjkr661wvf" path="res://water/1_00045.png" id="56_jqva3"]
 [ext_resource type="AudioStream" uid="uid://dwvyf80y2vjoi" path="res://Assets/water_sound.WAV" id="57_qqqwp"]
+[ext_resource type="PackedScene" uid="uid://d2xhqcxr41sij" path="res://weird plat.tscn" id="58_xj1nr"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
 _data = {
@@ -287,6 +288,14 @@ offset_bottom = 477.00003
 text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
 
+[node name="Label4" parent="." unique_id=1898415996 instance=ExtResource("7_f2dqo")]
+offset_left = 3283.0
+offset_top = -287.0
+offset_right = 3732.0
+offset_bottom = -210.0
+text = "now, return to portal"
+horizontal_alignment = 1
+
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
 z_index = 1
 position = Vector2(-221, 264.00003)
@@ -349,9 +358,6 @@ curve = SubResource("Curve2D_f2dqo")
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="static plat circle" parent="." unique_id=278953358 instance=ExtResource("8_kfp6p")]
-position = Vector2(178.00003, 537)
-
 [node name="static plat circle2" parent="." unique_id=1540278463 instance=ExtResource("8_kfp6p")]
 position = Vector2(1091, 275)
 
@@ -393,6 +399,8 @@ position = Vector2(4, 4)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kocsb")
 animation = &"water_play_anim"
+frame = 45
+frame_progress = 1.0
 speed_scale = 4.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="tub" unique_id=1110038295]
@@ -404,6 +412,9 @@ max_distance = 2215.0
 attenuation = 0.31864062
 max_polyphony = 2
 panning_strength = 1.54
+
+[node name="BrokenPlat2" parent="." unique_id=1795742901 instance=ExtResource("58_xj1nr")]
+position = Vector2(264.00003, 475.99997)
 
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
 [connection signal="body_entered" from="tub" to="tub" method="_on_body_entered"]
