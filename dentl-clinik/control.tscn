@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dp2yhfi3ekfhx"]
 
 [ext_resource type="Script" uid="uid://k14l8rb7idjy" path="res://control.gd" id="1_ee4bf"]
-[ext_resource type="FontFile" uid="uid://d1v6yv3a3npeo" path="res://Assets/monogram/ttf/monogram.ttf" id="1_qtu10"]
+[ext_resource type="FontFile" path="res://Assets/monogram/ttf/monogram.ttf" id="1_qtu10"]
 [ext_resource type="Texture2D" uid="uid://ok6jrwmekcc4" path="res://Assets/again24x24.png" id="2_62e2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]

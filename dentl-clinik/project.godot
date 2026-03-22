@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 AudioBg="*uid://itxoa8d33inx"
 
+[display]
+
+window/default_bus_layout="res://default_bus_layout.tres"
+
 [input]
 
 walk_right={

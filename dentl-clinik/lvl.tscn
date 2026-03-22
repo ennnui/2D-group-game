@@ -83,9 +83,9 @@ and make it back to the portal"
 horizontal_alignment = 1
 
 [node name="Label3" parent="." unique_id=1331050598 instance=ExtResource("7_f2dqo")]
-offset_left = 1963.0002
+offset_left = 1964.0002
 offset_top = 400.00003
-offset_right = 2412.0002
+offset_right = 2413.0002
 offset_bottom = 477.00003
 text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
