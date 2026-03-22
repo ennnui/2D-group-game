@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cr8cexnthiqoy"]
+
+[ext_resource type="Texture2D" uid="uid://c5oti3xo0qf3b" path="res://water tank 2  32  x 16.png" id="1_7jvro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jvro"]
+size = Vector2(32, 14)
+
+[node name="Node2D" type="Node2D" unique_id=1222793887]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1695540139]
+position = Vector2(0, -6)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=730843273]
+shape = SubResource("RectangleShape2D_7jvro")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=106495732]
+position = Vector2(0, 1)
+texture = ExtResource("1_7jvro")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D" unique_id=1449317880]
+root_node = NodePath("../..")

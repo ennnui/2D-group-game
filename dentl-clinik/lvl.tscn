@@ -9,6 +9,54 @@
 [ext_resource type="PackedScene" uid="uid://bvps70ore51r" path="res://rotating_platform.tscn" id="8_5ud41"]
 [ext_resource type="PackedScene" uid="uid://dnnn1htmdu6ha" path="res://static plat circle.tscn" id="8_kfp6p"]
 [ext_resource type="Texture2D" uid="uid://b6p5y71cefkry" path="res://Assets/portal.png" id="9_kfp6p"]
+[ext_resource type="Script" uid="uid://btlpgpiv6la6l" path="res://tub.gd" id="10_5w2j7"]
+[ext_resource type="Texture2D" uid="uid://bqw75ftu30kp3" path="res://water/1_00000.png" id="11_qqqwp"]
+[ext_resource type="Texture2D" uid="uid://cyi47djc4m36m" path="res://water/1_00001.png" id="12_xj1nr"]
+[ext_resource type="Texture2D" uid="uid://cev4oq8skwxqe" path="res://water/1_00002.png" id="13_stq4b"]
+[ext_resource type="Texture2D" uid="uid://esj5q4cgluk2" path="res://water/1_00003.png" id="14_2dd3p"]
+[ext_resource type="Texture2D" uid="uid://bnmu3gjkr0s8r" path="res://water/1_00004.png" id="15_dnyh2"]
+[ext_resource type="Texture2D" uid="uid://bnrrxiuun443v" path="res://water/1_00005.png" id="16_1pfn7"]
+[ext_resource type="Texture2D" uid="uid://b8g1p0cdxt50b" path="res://water/1_00006.png" id="17_1yhww"]
+[ext_resource type="Texture2D" uid="uid://bn8hvryhl5epp" path="res://water/1_00007.png" id="18_2v7tl"]
+[ext_resource type="Texture2D" uid="uid://e7e7dolkx4xy" path="res://water/1_00008.png" id="19_pf6vd"]
+[ext_resource type="Texture2D" uid="uid://bsm80widyk8n2" path="res://water/1_00009.png" id="20_m8qs5"]
+[ext_resource type="Texture2D" uid="uid://dyty5ro032s17" path="res://water/1_00010.png" id="21_huunk"]
+[ext_resource type="Texture2D" uid="uid://c4uynn1ln6hko" path="res://water/1_00011.png" id="22_7ejkx"]
+[ext_resource type="Texture2D" uid="uid://cgg8ut6i1wq7t" path="res://water/1_00012.png" id="23_j7yft"]
+[ext_resource type="Texture2D" uid="uid://c17sr3m87tvm4" path="res://water/1_00013.png" id="24_281i7"]
+[ext_resource type="Texture2D" uid="uid://c7iuxuaqgeyi8" path="res://water/1_00014.png" id="25_6jua4"]
+[ext_resource type="Texture2D" uid="uid://dxxmfl47pecw" path="res://water/1_00015.png" id="26_b0koe"]
+[ext_resource type="Texture2D" uid="uid://cxj55yui2ykn7" path="res://water/1_00016.png" id="27_tf8wx"]
+[ext_resource type="Texture2D" uid="uid://dwqxfdgtkbthg" path="res://water/1_00017.png" id="28_ttj18"]
+[ext_resource type="Texture2D" uid="uid://dqibi7gsyq4nf" path="res://water/1_00018.png" id="29_xf7g6"]
+[ext_resource type="Texture2D" uid="uid://c2agueakum8b5" path="res://water/1_00019.png" id="30_v56jv"]
+[ext_resource type="Texture2D" uid="uid://cq37exjfbs76u" path="res://water/1_00020.png" id="31_yki7r"]
+[ext_resource type="Texture2D" uid="uid://cwl0ifsrl30m4" path="res://water/1_00021.png" id="32_xeidj"]
+[ext_resource type="Texture2D" uid="uid://dc6a8w8g0dss3" path="res://water/1_00022.png" id="33_jwwdn"]
+[ext_resource type="Texture2D" uid="uid://dvlb0j8gicop4" path="res://water/1_00023.png" id="34_kgwnq"]
+[ext_resource type="Texture2D" uid="uid://beok6ueggvp82" path="res://water/1_00024.png" id="35_wtfew"]
+[ext_resource type="Texture2D" uid="uid://dmgpwqyc2ct0t" path="res://water/1_00025.png" id="36_8nwqy"]
+[ext_resource type="Texture2D" uid="uid://cts0n4fjljbme" path="res://water/1_00026.png" id="37_kw4ra"]
+[ext_resource type="Texture2D" uid="uid://bwmee0fi0qehd" path="res://water/1_00027.png" id="38_g8ki4"]
+[ext_resource type="Texture2D" uid="uid://bujnviatnp4p3" path="res://water/1_00028.png" id="39_f6q8h"]
+[ext_resource type="Texture2D" uid="uid://cnfkilxr6p8p" path="res://water/1_00029.png" id="40_o6beg"]
+[ext_resource type="Texture2D" uid="uid://w30a563foggl" path="res://water/1_00030.png" id="41_x5kil"]
+[ext_resource type="Texture2D" uid="uid://dcs1qx53y4jxw" path="res://water/1_00031.png" id="42_hgkag"]
+[ext_resource type="Texture2D" uid="uid://b212eve6equrt" path="res://water/1_00032.png" id="43_ntspj"]
+[ext_resource type="Texture2D" uid="uid://pro2c2e0uqxd" path="res://water/1_00033.png" id="44_6d6a4"]
+[ext_resource type="Texture2D" uid="uid://bi0opxcoa0nll" path="res://water/1_00034.png" id="45_12dnx"]
+[ext_resource type="Texture2D" uid="uid://dyws8oo56sbqj" path="res://water/1_00035.png" id="46_ubwlp"]
+[ext_resource type="Texture2D" uid="uid://b5im05enhts33" path="res://water/1_00036.png" id="47_ax5yj"]
+[ext_resource type="Texture2D" uid="uid://c8ekdw7nbialf" path="res://water/1_00037.png" id="48_7gr48"]
+[ext_resource type="Texture2D" uid="uid://d12x32t2k0m5j" path="res://water/1_00038.png" id="49_r6gxl"]
+[ext_resource type="Texture2D" uid="uid://c7x7qjtxabe0g" path="res://water/1_00039.png" id="50_0c8dn"]
+[ext_resource type="Texture2D" uid="uid://dcigv51o48lwb" path="res://water/1_00040.png" id="51_obd63"]
+[ext_resource type="Texture2D" uid="uid://6ndi6r58c1hd" path="res://water/1_00041.png" id="52_bmobm"]
+[ext_resource type="Texture2D" uid="uid://txcmipawg5xs" path="res://water/1_00042.png" id="53_m670a"]
+[ext_resource type="Texture2D" uid="uid://bqilcds8fjmyy" path="res://water/1_00043.png" id="54_dvbus"]
+[ext_resource type="Texture2D" uid="uid://bjiese4j56b5x" path="res://water/1_00044.png" id="55_eej05"]
+[ext_resource type="Texture2D" uid="uid://2mrjkr661wvf" path="res://water/1_00045.png" id="56_jqva3"]
+[ext_resource type="AudioStream" uid="uid://dwvyf80y2vjoi" path="res://Assets/water_sound.WAV" id="57_qqqwp"]
 
 [sub_resource type="Curve2D" id="Curve2D_5ud41"]
 _data = {
@@ -37,6 +85,155 @@ point_count = 6
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfp6p"]
 size = Vector2(14.311456, 14.723297)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qldpa"]
+size = Vector2(102, 43)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kocsb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qqqwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xj1nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_stq4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2dd3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dnyh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1pfn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1yhww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2v7tl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_pf6vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_m8qs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_huunk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7ejkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_j7yft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_281i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6jua4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_b0koe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tf8wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ttj18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xf7g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_v56jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_yki7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xeidj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jwwdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kgwnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_wtfew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8nwqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kw4ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_g8ki4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_f6q8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_o6beg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_x5kil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hgkag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ntspj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_6d6a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_12dnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ubwlp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ax5yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_7gr48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_r6gxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_0c8dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_obd63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_bmobm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_m670a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_dvbus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_eej05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_jqva3")
+}],
+"loop": false,
+"name": &"water_play_anim",
+"speed": 5.0
+}]
 
 [node name="LVL" type="Node2D" unique_id=925290357]
 
@@ -91,6 +288,7 @@ text = "oh, and.... don't get bit!"
 horizontal_alignment = 1
 
 [node name="bird wiz" parent="." unique_id=443955831 instance=ExtResource("2_4iw1c")]
+z_index = 1
 position = Vector2(-221, 264.00003)
 scale = Vector2(1.00403, 1.00235)
 
@@ -151,14 +349,6 @@ curve = SubResource("Curve2D_f2dqo")
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="note (delete later)" unique_id=1154912754]
-layout_mode = 0
-offset_left = 3506.0
-offset_top = -161.0
-offset_right = 3584.0
-offset_bottom = -83.0
-text = "tub goes here"
-
 [node name="static plat circle" parent="." unique_id=278953358 instance=ExtResource("8_kfp6p")]
 position = Vector2(178.00003, 537)
 
@@ -188,4 +378,32 @@ texture = ExtResource("9_kfp6p")
 position = Vector2(-0.5662813, -2.522522)
 shape = SubResource("RectangleShape2D_kfp6p")
 
+[node name="tub" type="Area2D" parent="." unique_id=31404627]
+position = Vector2(3518, -75)
+collision_layer = 2
+script = ExtResource("10_5w2j7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tub" unique_id=262272699]
+position = Vector2(3, 1.5)
+shape = SubResource("RectangleShape2D_qldpa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tub" unique_id=1670160110]
+light_mask = 2
+position = Vector2(4, 4)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_kocsb")
+animation = &"water_play_anim"
+speed_scale = 4.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="tub" unique_id=1110038295]
+position = Vector2(4, 4)
+scale = Vector2(3, 3)
+stream = ExtResource("57_qqqwp")
+pitch_scale = 0.83
+max_distance = 2215.0
+attenuation = 0.31864062
+max_polyphony = 2
+panning_strength = 1.54
+
 [connection signal="body_entered" from="killbox" to="killbox" method="_on_body_entered"]
+[connection signal="body_entered" from="tub" to="tub" method="_on_body_entered"]
