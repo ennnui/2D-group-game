@@ -10,6 +10,9 @@ script/source = "extends CharacterBody2D
 const SPEED = 400.0
 const JUMP_VELOCITY = -450.0
 @export var last_direction := Vector2(1,0)
+var has_touched_tub: = false
+var has_touched_portal: = false
+
 
 @onready var bird_wiz = $AnimatedSprite2D
 func _physics_process(delta):
@@ -47,6 +50,8 @@ func _physics_process(delta):
 		#print(\"im dead\")
 
 	move_and_slide()
+
+		
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2e7j"]
@@ -178,9 +183,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="bird wiz" type="Node2D" unique_id=865072794]
+[node name="bird wiz" type="Node2D" unique_id=865072794 groups=["player"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1731684117]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1731684117 groups=["player"]]
 script = SubResource("GDScript_gfdyp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1891853261]

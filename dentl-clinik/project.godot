@@ -27,6 +27,10 @@ AudioBg="*uid://itxoa8d33inx"
 
 window/default_bus_layout="res://default_bus_layout.tres"
 
+[global_group]
+
+player=""
+
 [input]
 
 walk_right={
