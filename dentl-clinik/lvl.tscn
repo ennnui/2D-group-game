@@ -70,7 +70,7 @@ offset_left = -52.99997
 offset_top = 198.0
 offset_right = 448.00003
 offset_bottom = 239.0
-text = "ASWD or arrows to walk & jump"
+text = "WASD or arrows to walk & jump"
 
 [node name="Label2" parent="." unique_id=2068730833 instance=ExtResource("7_f2dqo")]
 offset_left = 1051.0001
