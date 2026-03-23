@@ -212,6 +212,7 @@ position = Vector2(4, 4)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kocsb")
 animation = &"water_play_anim"
+frame = 45
 speed_scale = -4.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1757047151]
