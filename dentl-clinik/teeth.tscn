@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://ckxoy6r3fuijt" path="res://Assets/sounds/rawr.mp3" id="4_nhvtx"]
 
 [sub_resource type="Animation" id="Animation_nhvtx"]
-length = 5.6
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -155,6 +155,7 @@ rotation = 3.1415925
 polygon = PackedVector2Array(293.99997, 86.00418, 280.99997, 96.00418, 262.99997, 75.00418, 235.99997, 78.00418, 216.99997, 65.00418, 201.99997, 75.00418, 158.99997, 43.00418, 115.99997, 49.00418, 58, 40.00415, 12, 41.00415, -30, 40.00415, -47, 53.00415, -80, 48.00415, -103, 60.00415, -131, 84.00415, -142, 72.00415, -169, 87.00415, -196, 81.00415, -202.00006, 104.00415, -211.00006, 107.00415, -219.00006, 103.00415, -217, 77.00415, -193, 42.00415, -141, -8.99585, -13, -78.99585, 76, -74.99585, 207.99997, -12.995819, 263.99997, 43.00418)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=842878224]
+callback_mode_process = 0
 libraries/ = SubResource("AnimationLibrary_whnn1")
 
 [node name="Timer" type="Timer" parent="AnimationPlayer" unique_id=2086134680]

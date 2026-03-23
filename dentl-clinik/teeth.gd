@@ -16,10 +16,6 @@ func _ready():
 	$AnimationPlayer/Timer.wait_time = randf_range(minimum,maximum)
 	$AnimationPlayer/Timer.start()
 
-#body enter
-#func _on_area_2d_body_entered(Node2D) -> void:
-	#proximity_player = true
-	
 
 func _process(delta: float) -> void:
 	proximity_player = area_top.overlaps_body(player) and area_bot.overlaps_body(player)

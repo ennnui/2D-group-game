@@ -11,5 +11,5 @@ offset_left = 32.0
 offset_top = 8.0
 offset_right = 1089.0
 offset_bottom = 136.0
-text = "ASWD or arrows to walk & jump                  retrieve more potion juice and make it back to base                 don't get bit!"
+text = "WASD or arrows to walk & jump                  retrieve more potion juice and make it back to base                 don't get bit!"
 label_settings = SubResource("LabelSettings_7g0x0")
