@@ -40,10 +40,10 @@ point_count = 6
 [node name="LVL" type="Node2D" unique_id=925290357]
 
 [node name="bkg" type="ColorRect" parent="." unique_id=456223926]
-offset_left = -657.0
-offset_top = -1064.0
+offset_left = -2656.0
+offset_top = -1951.0
 offset_right = 4912.0
-offset_bottom = 1384.0
+offset_bottom = 2513.0
 color = Color(0.02745098, 0.09411765, 0.12941177, 1)
 metadata/_edit_lock_ = true
 
@@ -178,7 +178,7 @@ position = Vector2(1311, 235.00003)
 position = Vector2(264.00003, 475.99997)
 
 [node name="tub2" parent="." unique_id=1309701707 instance=ExtResource("59_2dd3p")]
-position = Vector2(370, 541)
+position = Vector2(3514, -76)
 
 [node name="portal" parent="." unique_id=659579274 node_paths=PackedStringArray("tub_node") instance=ExtResource("10_stq4b")]
 position = Vector2(-138, 466)
