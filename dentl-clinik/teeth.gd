@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	print(proximity_player)
 	
 	if proximity_player and player_alive:
-		#get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://die.tscn")
 		print("player_is_dead") 
 		player_alive = false
 
